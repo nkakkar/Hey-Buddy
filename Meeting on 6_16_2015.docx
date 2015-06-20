@@ -1,0 +1,15 @@
+We discussed:
+1. We need to make a static file constant.js and hardcode one user so that we may be able to work on different parts and 
+avoid interdependencies.
+2. Use utility.js to fetch key-value pairs of username-password to proceed to the next page
+Sign-In/Register should be completed by 21st June. (Divyajeet+Neha)
+Establishing connection to websites-July 5th (Divyajeet)
+Import connections to Hey Buddy-July 5th (Neha)
+Reach Out and Log- July 19th (Divyajeet)
+Setup Reminders- July 19th (Neha)
+
+Agenda for next meeting:
+1. Issues in creating sign-in/Register page, if any.
+2. Deliverable for the next meeting.
+3. Work completed till date.
+ 
