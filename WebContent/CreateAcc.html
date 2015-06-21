@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script>
+function resetFunction() {
+    document.getElementById("myForm").reset();
+}
+
+function checkForm()
+{
+  if(myForm.uname.value == "") {
+    alert("Error: Username cannot be blank!");
+    myForm.uname.focus();
+    return false;
+  }
+  re = /^\w+$/;
+  if(!re.test(myForm.uname.value)) {
+    alert("Error: Username must contain only letters, numbers and underscores!");
+    myForm.uname.focus();
+    return false;
+  }
+
+  if(myForm.pass.value != "" && myForm.pass.value == myForm.cnfpass.value) {
+    if(myForm.pass.value.length < 6) {
+      alert("Error: Password must contain at least six characters!");
+      myForm.pass.focus();
+      return false;
+    }
+    if(myForm.pass.value == myForm.uname.value) {
+      alert("Error: Password must be different from Username!");
+      myForm.pass.focus();
+      return false;
+    }
+    re = /[0-9]/;
+    if(!re.test(myForm.pass.value)) {
+      alert("Error: password must contain at least one number (0-9)!");
+      myForm.pass.focus();
+      return false;
+    }
+    re = /[a-z]/;
+    if(!re.test(myForm.pass.value)) {
+      alert("Error: password must contain at least one lowercase letter (a-z)!");
+      myForm.pass.focus();
+      return false;
+    }
+    re = /[A-Z]/;
+    if(!re.test(myForm.pass.value)) {
+      alert("Error: password must contain at least one uppercase letter (A-Z)!");
+      myForm.pass.focus();
+      return false;
+    }
+  } else {
+    alert("Error: Please check that you've entered and confirmed your password!");
+    myForm.pass.focus();
+    return false;
+  }
+
+  alert("You entered a valid password");
+  return true;
+}
+</script>
+
+<style>
+body
+{
+  background-image: url("http://marvelouswallpapers.com/wp-content/uploads/2013/12/plain-green-background-wallpaper.jpg");
+  padding:30px;
+  margin:3px;
+  text-align: center; 
+}
+
+tr.required::before{
+	content: url("http://www.gomedicare.com/images/required-field-star.gif")
+} 
+</style>
+
+</head>
+
+<body>
+<form id="myForm" onsubmit="return checkForm()" action="SaveToDatabase" method="post">
+<h2>Please enter your details to create a new account.</h2><br>
+
+<table align="center">
+<tr class="req">
+<td>First Name:</td>
+<td><input type="text" name="firstname" required/></td>
+</tr>
+<tr class="req">
+<td>Last Name:</td>
+<td><input type="text" name="lastname" required/></td>
+</tr>
+<tr class="req">
+<td>Email ID:</td>
+<td><input type="text" name="emailid" required/></td>
+</tr>
+<tr>
+<td>Contact Number:</td>
+<td><input type="text" name="contactnum"/></td>
+</tr>
+<tr class="req">
+<td>Username:</td>
+<td><input type="text" name="uname" required/></td>
+</tr>
+<tr class="req">
+<td>Password:</td>
+<td><input type="password" name="pass" required/></td>
+</tr>
+<tr class="req">
+<td>Confirm Password:</td>
+<td><input type="password" name="cnfpass" required/></td>
+</tr>
+</table>
+<br>
+
+<input type="submit" value="SAVE"/>
+<input type="button" onclick="resetFunction()" value="RESET"/>
+</form>
+</body>
+</html>

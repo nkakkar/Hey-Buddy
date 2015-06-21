@@ -1,0 +1,17 @@
+				                   Meeting (JUNE 13th 2015)
+	
+Following are important points discussed in the meeting.
+
+1.	Only goal or task oriented functionalities to be included in the app. Keep in mind the theme or “purpose” of the app while including even the smallest new feature. 
+2.	App should also be able to adapt according to the number of calls by a user to a particular contact. 
+        Eg: if a user calls a particular contact frequently in current week, then app should “increase the level” of that contact to more frequently contacted list for next week.
+3.	In person conversations to be done.
+4.	Deadlines to be set in the next week.
+5.	Switching of team leads every week. 
+6.	From 21st June (until 3 weeks), remain connected by uploading every document in GITHUB.
+7.	Development Process :
+        Name | Development | Quality Assurance
+        Either Divyajeet develops the code and Neha tests or vice versa(switch the roles on timely basis).
+8.	Make sure code review is done and deciding on how to finish the parts together.
+
+ 
